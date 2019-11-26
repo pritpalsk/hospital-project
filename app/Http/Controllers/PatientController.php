@@ -35,7 +35,18 @@ class PatientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $patient->id = request('id');
+
+
+        $patient = Patient::create($request->all());
+        $dbpatient = Patient::first();
+
+
+        return response()->json([
+                $request->all(),
+                $patient,
+                $dbpatient
+            ]);
     }
 
     /**
