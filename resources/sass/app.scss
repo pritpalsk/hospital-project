@@ -1,1 +1,43 @@
-//
+$font-stack:    Helvetica, sans-serif;
+$gray-one: whitesmoke;
+$primary-color: #8a96c7;
+$accent-color: orange;
+
+
+$navigation-height: 60px;
+
+
+body {
+  font: 100% $font-stack;
+  background: $gray-one;
+}
+
+.navigation {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: $navigation-height;
+	background: $primary-color;
+	display: flex;
+
+	.nav-item {
+		line-height: $navigation-height;
+		padding: 0 10px;
+		a {
+			text-decoration: none;
+			color: white;
+		}
+		a:hover {
+			color: $accent-color;
+		}
+	}
+}
+
+.container {
+	position: absolute;
+	top: $navigation-height;
+	right: 0;
+	left: 0;
+	padding: 20px;
+}
