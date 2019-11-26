@@ -15,16 +15,18 @@
                 <a href="{{ route('patient.create') }}">Add Patient</a>
             </div>
             <div class="nav-item">
-                <a href="#">Avaliable Doctors</a>
+                <a href="{{ route('doctor.index') }}">Avaliable Doctors</a>
             </div>
             <div class="nav-item">
-                <a href="#">Appointments</a>
+                <a href="{{ route('appointment.index') }}">Appointments</a>
             </div>
             <div class="nav-item">
-                <a href="#">Add Appointment</a>
+                <a href="{{ route('appointment.create') }}">Add Appointment</a>
             </div>
     	</div>	
         <div class="container">
+            <h1>@yield('title')</h1>
+            <br>
             @yield('content')
         </div>
     </body>

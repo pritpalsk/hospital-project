@@ -1,9 +1,8 @@
 @extends('layout.app')
 
-@section('title', 'Page Title')
+@section('title', 'Add Patient')
 
 @section('content')
-    <p>Create Patient</p>
     <form action="{{ route('patient.store') }}" method="POST">
     	@csrf
 

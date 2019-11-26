@@ -1,7 +1,7 @@
 @extends('layout.app')
 
-@section('title', 'Page Title')
+@section('title', 'View Patients')
 
 @section('content')
-    <p>All Patients</p>
+    {{ $patients }}
 @endsection
