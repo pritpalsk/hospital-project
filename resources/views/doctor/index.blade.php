@@ -4,4 +4,4 @@
 
 @section('content')
 	{{ $doctors }}
-@endsectiona
+@endsection

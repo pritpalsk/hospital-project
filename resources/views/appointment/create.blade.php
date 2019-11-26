@@ -3,4 +3,4 @@
 @section('title', 'Add Appointment')
 
 @section('content')
-@endsectiona
+@endsection

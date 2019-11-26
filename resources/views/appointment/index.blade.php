@@ -4,4 +4,4 @@
 
 @section('content')
 	{{ $appointments }}
-@endsectiona
+@endsection

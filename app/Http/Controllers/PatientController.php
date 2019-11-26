@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Patient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PatientController extends Controller
 {
@@ -37,8 +38,16 @@ class PatientController extends Controller
      */
     public function store(Request $request)
     {
-        // $patient->id = request('id');
+        $request->get('fname');
+        
+        DB::statement(`
+            INSERT INTO PATIENT (PatientID, First, Last, SSN, Gender, Phone, Street, City, State, ZipCode, Date_Of_Birth, Dept_ID)
+            VALUES(654321, "Jane", "Doe", 654321, "F", 0203945,"A","B","C",64081, '1997-04-25', 1); `)
 
+
+        return;
+
+        // $patient->id = request('id');
 
         $patient = Patient::create($request->all());
         $dbpatient = Patient::first();
